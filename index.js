@@ -6,7 +6,7 @@ const birthdayMusic = document.getElementById("birthdayMusic");
 const texts = [
   "Hôm nay là ngày rất đặc biệt... vì có một thiên thần nhỏ ra đời cách đây 20 năm rưỡi (ừm tầm đó đó 😚)",
   "Chúc bé tuổi mới đáng yêu hơn, ăn gì cũng ngon, ngủ gì cũng say, học gì cũng vô, deadline nào cũng né 🥳",
-  "À còn điều quan trọng nhất... là tuổi mới hãy để anh bên cạnh nhiều hơn một chút nhaaaa ☺️"
+  "Nếu có thể, anh mong năm nay và cả những năm sau nữa... đều được chúc em thế này nhaaaa ☺️" 
 ];
 
 giftBox.addEventListener('click', () => {
