@@ -44,7 +44,8 @@ function typeWriter(texts, element, textIndex = 0, i = 0) {
         const imgGift = document.createElement('div');
         imgGift.classList.add('img-gift');
         message.appendChild(imgGift);
-        }, 1500);
+        }, 500);
+        spawnFloatingWords();
     }
 }
 
@@ -56,7 +57,6 @@ giftBox.addEventListener("click", () => {
     typeWriter(texts, birthdayText);
   }, 3500);
 
-  spawnFloatingWords();
 });
 
 document.addEventListener('click', (e) => {
@@ -148,7 +148,7 @@ document.addEventListener('click', (e) => {
 });
 
 function spawnFloatingWords() {
-  const words = ["Happy Birthday 💕", "You’re my sunshine ☀️", "Cuteeee 😚", "Love u 💖"];
+  const words = ["Happy Birthday 💕", "You’re my sunshine ☀️", "Cuteeee 😚", "Love u 💖", "cnmeow 😗"];
   setInterval(() => {
     const word = document.createElement('div');
     word.className = 'floating-word';
