@@ -4,8 +4,8 @@ const birthdayText = document.getElementById("birthdayText");
 const birthdayMusic = document.getElementById("birthdayMusic");
 
 const texts = [
-  "Hôm nay là ngày rất đặc biệt... vì có một thiên thần nhỏ ra đời cách đây 20 năm rưỡi (ừm tầm đó đó 😚)",
-  "Chúc bé tuổi mới đáng yêu hơn, ăn gì cũng ngon, ngủ gì cũng say, học gì cũng vô, deadline nào cũng né 🥳",
+  "Có một người đặc biệt chào đời vào hôm nay… và khiến cả vũ trụ dịu dàng thêm một chút 🌸",
+  "Chúc bé tuổi mới luôn vui, luôn khoẻ, học tốt, deadline né khéo, và mỗi ngày đều có điều đáng nhớ 🥳",
   "Nếu có thể, anh mong năm nay và cả những năm sau nữa... đều được chúc em thế này nhaaaa ☺️" 
 ];
 
