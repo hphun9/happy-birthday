@@ -88,3 +88,59 @@ function getRandomColor() {
     const colors = ['#FFD700', '#FF69B4', '#00FFFF', '#ADFF2F', '#FFA500', '#FF4500', '#87CEFA', '#EE82EE'];
     return colors[Math.floor(Math.random() * colors.length)];
 }
+
+function launchFirework() {
+  const firework = document.createElement('div');
+  firework.classList.add('firework');
+  firework.style.left = `${Math.random() * window.innerWidth}px`;
+  firework.style.bottom = '0px';
+  document.body.appendChild(firework);
+
+  setTimeout(() => {
+    const x = firework.offsetLeft;
+    const y = window.innerHeight - 400;
+
+    for (let i = 0; i < 20; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('explosion');
+      particle.style.left = `${x}px`;
+      particle.style.top = `${y}px`;
+      particle.style.backgroundColor = getRandomColor();
+      const angle = Math.random() * 2 * Math.PI;
+      const distance = Math.random() * 80;
+      const dx = Math.cos(angle) * distance;
+      const dy = Math.sin(angle) * distance;
+      particle.style.setProperty('--x', `${dx}px`);
+      particle.style.setProperty('--y', `${dy}px`);
+      document.body.appendChild(particle);
+
+      setTimeout(() => particle.remove(), 600);
+    }
+
+    firework.remove();
+  }, 800);
+}
+
+function getRandomColor() {
+  const colors = ['#FF69B4', '#FFD700', '#87CEFA', '#ADFF2F', '#FF4500', '#00FFFF', '#FFFFFF', '#EE82EE'];
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
+let fireworksCount = 10;
+for (let i = 0; i < fireworksCount; i++) {
+  setTimeout(() => {
+    launchFirework();
+  }, i * 300);
+}
+
+function createFallingStar() {
+  const star = document.createElement('div');
+  star.classList.add('falling-star');
+  star.style.left = `${Math.random() * window.innerWidth * 0.8}px`;
+  document.body.appendChild(star);
+
+  setTimeout(() => star.remove(), 3000);
+}
+
+setInterval(createFallingStar, 600);
+
