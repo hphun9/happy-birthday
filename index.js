@@ -55,6 +55,8 @@ giftBox.addEventListener("click", () => {
   setTimeout(() => {
     typeWriter(texts, birthdayText);
   }, 3500);
+
+  spawnFloatingWords();
 });
 
 document.addEventListener('click', (e) => {
@@ -133,17 +135,6 @@ for (let i = 0; i < fireworksCount; i++) {
   }, i * 300);
 }
 
-function createFallingStar() {
-  const star = document.createElement('div');
-  star.classList.add('falling-star');
-  star.style.left = `${Math.random() * window.innerWidth * 0.8}px`;
-  document.body.appendChild(star);
-
-  setTimeout(() => star.remove(), 3000);
-}
-
-setInterval(createFallingStar, 600);
-
 document.addEventListener('click', (e) => {
   const heart = document.createElement('div');
   heart.textContent = '💖';
@@ -155,3 +146,16 @@ document.addEventListener('click', (e) => {
   document.body.appendChild(heart);
   setTimeout(() => heart.remove(), 1000);
 });
+
+function spawnFloatingWords() {
+  const words = ["Happy Birthday 💕", "You’re my sunshine ☀️", "Cuteeee 😚", "Love u 💖"];
+  setInterval(() => {
+    const word = document.createElement('div');
+    word.className = 'floating-word';
+    word.textContent = words[Math.floor(Math.random() * words.length)];
+    word.style.left = `${Math.random() * 80 + 10}%`;
+    word.style.animationDelay = `${Math.random()}s`;
+    document.body.appendChild(word);
+    setTimeout(() => word.remove(), 6000);
+  }, 1000);
+}
