@@ -256,3 +256,31 @@ h1 {
   from { transform: translateY(0); opacity: 0.8; }
   to { transform: translateY(-150vh); opacity: 0; }
 }
+
+.floating-heart {
+  pointer-events: none;
+  font-size: 24px;
+  animation: heart-float 8s ease-out forwards;
+  position: absolute;
+  z-index: 999;
+}
+
+@keyframes heart-float {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(-20px, -100px);
+  }
+  50% {
+    transform: translate(20px, -200px);
+  }
+  75% {
+    transform: translate(-15px, -300px);
+  }
+  100% {
+    transform: translate(0, -400px);
+    opacity: 0;
+  }
+}

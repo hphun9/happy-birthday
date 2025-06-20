@@ -141,10 +141,9 @@ document.addEventListener('click', (e) => {
   heart.style.position = 'absolute';
   heart.style.left = `${e.clientX}px`;
   heart.style.top = `${e.clientY}px`;
-  heart.style.fontSize = '24px';
-  heart.style.animation = 'floatUp 1s ease-out forwards';
+  heart.classList.add('floating-heart');
   document.body.appendChild(heart);
-  setTimeout(() => heart.remove(), 1000);
+  setTimeout(() => heart.remove(), 8000);
 });
 
 function spawnFloatingWords() {
