@@ -144,3 +144,14 @@ function createFallingStar() {
 
 setInterval(createFallingStar, 600);
 
+document.addEventListener('click', (e) => {
+  const heart = document.createElement('div');
+  heart.textContent = '💖';
+  heart.style.position = 'absolute';
+  heart.style.left = `${e.clientX}px`;
+  heart.style.top = `${e.clientY}px`;
+  heart.style.fontSize = '24px';
+  heart.style.animation = 'floatUp 1s ease-out forwards';
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 1000);
+});

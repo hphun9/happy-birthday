@@ -257,3 +257,11 @@ h1 {
     opacity: 1;
   }
 }
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
